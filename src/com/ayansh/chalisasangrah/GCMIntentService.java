@@ -83,9 +83,9 @@ public class GCMIntentService extends HanuGCMIntentService {
 
 		int postsDownloaded = result.getData().getInt("PostsDownloaded");
 		if (postsDownloaded == 0) {
-			title = "New aarti downloaded.";
+			title = "New chalisa downloaded.";
 		} else {
-			title = postsDownloaded + " new aarti(s) have been downloaded";
+			title = postsDownloaded + " new chalisa(s) have been downloaded";
 		}
 
 		Intent notificationIntent = new Intent(this, Main.class);
@@ -101,7 +101,7 @@ public class GCMIntentService extends HanuGCMIntentService {
 		NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
 
 		inboxStyle.setBigContentTitle(title);
-		inboxStyle.setSummaryText("New aartis downloaded");
+		inboxStyle.setSummaryText("New chalisa downloaded");
 
 		// Add joke titles
 		Iterator<String> i = postTitleList.listIterator();
