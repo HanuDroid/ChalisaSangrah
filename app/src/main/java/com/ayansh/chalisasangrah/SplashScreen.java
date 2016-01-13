@@ -40,7 +40,7 @@ public class SplashScreen extends Activity implements Invoker {
         app.setContext(getApplicationContext());
 
 		// Accept my Terms
-        app.setEULAResult(true);
+        //app.setEULAResult(true);
 		if (!app.isEULAAccepted()) {
 			
 			Intent eula = new Intent(SplashScreen.this, DisplayFile.class);
