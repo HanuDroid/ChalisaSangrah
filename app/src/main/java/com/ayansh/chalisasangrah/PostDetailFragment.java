@@ -1,11 +1,5 @@
 package com.ayansh.chalisasangrah;
 
-import org.varunverma.hanu.Application.Application;
-import org.varunverma.hanu.Application.HanuFragmentInterface;
-import org.varunverma.hanu.Application.HanuGestureAnalyzer;
-import org.varunverma.hanu.Application.HanuGestureListener;
-import org.varunverma.hanu.Application.Post;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
@@ -22,7 +16,13 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class PostDetailFragment extends Fragment implements HanuFragmentInterface, HanuGestureListener{
+import com.ayansh.hanudroid.Application;
+import com.ayansh.hanudroid.HanuFragmentInterface;
+import com.ayansh.hanudroid.HanuGestureAnalyzer;
+import com.ayansh.hanudroid.HanuGestureListener;
+import com.ayansh.hanudroid.Post;
+
+public class PostDetailFragment extends Fragment implements HanuFragmentInterface, HanuGestureListener {
 
 	private Post post;
 	private WebView wv;
@@ -63,7 +63,7 @@ public class PostDetailFragment extends Fragment implements HanuFragmentInterfac
 			if (getArguments().containsKey("PostId")) {
 				int index = getArguments().getInt("PostId");
 	        	if(index >= app.getPostList().size()){
-	        		index = app.getPostList().size();
+	        		index = app.getPostList().size() - 1;
 	        	}
 	            post = app.getPostList().get(index);
 	        }

@@ -1,8 +1,5 @@
 package com.ayansh.chalisasangrah;
 
-import org.varunverma.hanu.Application.Application;
-import org.varunverma.hanu.Application.HanuFragmentInterface;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ayansh.hanudroid.Application;
+import com.ayansh.hanudroid.HanuFragmentInterface;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
